@@ -10,6 +10,7 @@ dist
 
 # netlify
 .netlify
+deno.lock
 
 # claude code local settings
 .claude/settings.local.json
