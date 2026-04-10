@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import type { AdVariant as AdVariantType } from '../../lib/types';
 import styles from './AdVariant.module.css';
 
@@ -9,8 +10,32 @@ const HEADLINE_MAX = 30;
 const DESCRIPTION_MAX = 90;
 
 function AdVariant({ variant }: AdVariantProps) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    const text = [
+      'HEADLINES',
+      ...variant.headlines,
+      '',
+      'DESCRIPTIONS',
+      ...variant.descriptions,
+    ].join('\n');
+
+    await navigator.clipboard.writeText(text);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <article className={styles.variant}>
+      <button
+        type="button"
+        className={`${styles.copyButton} ${copied ? styles.copyButtonDone : ''}`}
+        onClick={handleCopy}
+      >
+        {copied ? 'Copied!' : 'Copy'}
+      </button>
+
       <section className={styles.group}>
         <h3 className={styles.label}>Headlines</h3>
         <ul className={styles.list}>
