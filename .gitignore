@@ -15,6 +15,9 @@ dist
 .claude/settings.local.json
 CLAUDE.local.md
 
+# private dev notes
+dev-notes
+
 # OS
 .DS_Store
 
