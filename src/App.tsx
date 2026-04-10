@@ -7,11 +7,11 @@ const MOCK_VARIANT: AdVariantType = {
   headlines: [
     'Fresh Coffee Delivered',
     'Brew Café At Home',
-    'Premium Beans, Fast',
+    'Premium Specialty Beans Roasted And Shipped Weekly',
   ],
   descriptions: [
     'Single-origin beans roasted weekly and shipped to your door within 48h.',
-    'Skip the queue. Enjoy barista-grade coffee at home from just 89 NOK/bag.',
+    'Skip the queue and enjoy truly barista-grade specialty coffee delivered daily, right from just 89 NOK per bag.',
   ],
   rationale:
     'Rational angle focused on convenience and quality, targeting busy professionals who value specialty coffee.',

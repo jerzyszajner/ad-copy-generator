@@ -5,6 +5,9 @@ interface AdVariantProps {
   variant: AdVariantType;
 }
 
+const HEADLINE_MAX = 30;
+const DESCRIPTION_MAX = 90;
+
 function AdVariant({ variant }: AdVariantProps) {
   return (
     <article className={styles.variant}>
@@ -13,7 +16,14 @@ function AdVariant({ variant }: AdVariantProps) {
         <ul className={styles.list}>
           {variant.headlines.map((headline, index) => (
             <li key={index} className={styles.item}>
-              {headline}
+              <span className={styles.text}>{headline}</span>
+              <span
+                className={`${styles.counter} ${
+                  headline.length > HEADLINE_MAX ? styles.counterOver : ''
+                }`}
+              >
+                {headline.length}/{HEADLINE_MAX}
+              </span>
             </li>
           ))}
         </ul>
@@ -24,7 +34,14 @@ function AdVariant({ variant }: AdVariantProps) {
         <ul className={styles.list}>
           {variant.descriptions.map((description, index) => (
             <li key={index} className={styles.item}>
-              {description}
+              <span className={styles.text}>{description}</span>
+              <span
+                className={`${styles.counter} ${
+                  description.length > DESCRIPTION_MAX ? styles.counterOver : ''
+                }`}
+              >
+                {description.length}/{DESCRIPTION_MAX}
+              </span>
             </li>
           ))}
         </ul>

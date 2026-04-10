@@ -30,8 +30,27 @@
 }
 
 .item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.text {
   font-size: var(--font-size-base);
   color: var(--color-text);
+  flex: 1;
+}
+
+.counter {
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.counterOver {
+  color: var(--color-error);
 }
 
 .rationale {
