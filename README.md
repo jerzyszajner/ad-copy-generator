@@ -7,7 +7,7 @@ UX.
 
 ## Demo
 
-Live: _coming soon — will be deployed to Netlify_
+Live: <https://google-ads-copy-generator.netlify.app>
 
 ## What it does
 
@@ -98,6 +98,13 @@ This is an MVP. The main trade-offs:
   Fine for a portfolio demo, not for real traffic.
 
 A production version would revisit both.
+
+## Preview
+
+The app generating 3 ad variants in Norwegian for an organic vegetable
+delivery service, with all character counts within Google Ads limits:
+
+![Ad Copy Generator UI showing the input form filled with a Norwegian organic vegetable delivery brief, followed by 3 generated ad variants — each with headlines, descriptions, character counters in green, and rationales in Norwegian](./docs/screenshot.png)
 
 ## License
 
