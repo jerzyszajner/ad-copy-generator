@@ -1,0 +1,12 @@
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.empty {
+  font-size: var(--font-size-base);
+  color: var(--color-muted);
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
